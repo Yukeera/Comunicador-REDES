@@ -7,11 +7,14 @@ class Model {
   SoundFile letterM; SoundFile letterN; SoundFile letterO; SoundFile letterP; SoundFile letterQ; SoundFile letterR; SoundFile letterS; SoundFile letterT; SoundFile letterU; SoundFile letterV; SoundFile letterW; SoundFile letterX;
   SoundFile letterY; SoundFile letterZ; //declaração das variaveis sound
   
+  color colorButton = color(255,255,35);
+  int lastClickTime = 0;
+  
   float rectX = 600; float rectY = 300 ; float rectSize = 100; color rectColorClick = color(255,255,35);
   
   
   
-  SoundFile listSounds[];
+  public SoundFile listSounds[];
  
   Model(PApplet p){ //construtor
     parent = p;
@@ -30,7 +33,8 @@ class Model {
 }
   
   void tocar(int indice){ //tocando os sons
-    listSounds[indice].play();
+    listSounds[indice].playFor(1);
+    
   }
   
   
@@ -39,12 +43,12 @@ class Model {
     return alphabet[indice];
   }
  
- void reta(){
+ void reta(String text){ //criação de retangulo
    
    fill(rectColorClick);
    rect(rectX,rectY,rectSize,rectSize/2);
    fill(0);
-   text("ENTER", rectX + 35,  rectY + 30);
+   text(text, rectX + 35,  rectY + 30);
  
  }
  
@@ -57,8 +61,21 @@ class Model {
  }
  
  void setRectColor(){
-   rectColorClick = color(240,100,200);
+   //if(rectColorClick == color(240,100,200)){
+   //  rectColorClick = color(255,255,35);
+   //}
+   //else{
+   //  rectColorClick = color(240,100,200); 
+   //}
+   lastClickTime = millis();
+   colorButton = color(240,100,200);
    
+ }
+ 
+ void updateRectColor(){
+   if (millis() - lastClickTime > 300) {
+      colorButton = color(255, 255, 35);
+    }
  }
  
  float getRectX(){

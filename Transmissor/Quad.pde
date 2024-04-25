@@ -5,8 +5,12 @@ class Quad{
   public String letter;
   color colorClick = color(240,100,200);
   color colorButton;
+  int lastClickTime = 0;
   
  
+  Quad (){
+    
+  }
   
   Quad (float x, float y,float size, String letter){ //Construtor do quadrado
     this.x = x;
@@ -35,13 +39,25 @@ class Quad{
   }
   
   void clickButton(){ //mudar a tecla de cor
-    if (colorButton == colorClick){
-      colorButton = color(255,255,35);
-    }
-    else{
-      colorButton = colorClick;
+    //if (colorButton == colorClick){
+    //  colorButton = color(255,255,35);  
+    //}
+    //else{
+    //  colorButton = colorClick;
+      
+    //}
+    
+    lastClickTime = millis();
+    colorButton = colorClick;
+  }
+  
+  void updateColor() {
+    
+    if (millis() - lastClickTime > 300) {
+      colorButton = color(255, 255, 35);
     }
   }
+  
   
   
 }

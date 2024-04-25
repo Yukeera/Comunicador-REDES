@@ -1,7 +1,8 @@
 Model model = new Model(this);
 ArrayList<Quad> listQuad = new ArrayList<Quad>();
 Quad enter = new Quad(100,300,50,"ENTER");
-
+Fila fila = new Fila();
+Quad quad = new Quad();
 
 void setup() {
   size(720, 360);
@@ -26,10 +27,12 @@ void draw() {
   background(0, 0, 0);
   for (Quad quad : listQuad) { //mostrando as teclas na tela
     quad.displayQuad(quad);
+    quad.updateColor();
     
   }
-  model.reta();
- 
+  model.reta("ENVIAR");
+  model.updateRectColor();
+  
 }
 
 void mousePressed() { //se mouse for clicado
@@ -37,12 +40,13 @@ void mousePressed() { //se mouse for clicado
     Quad quad = listQuad.get(i);
     if (quad.isMouseOver(quad)) {
       quad.clickButton();
-      model.tocar(i);
-     
+      
+      fila.adicionar(i);
     }
   }
   
-  if(mouseX > model.getRectX() && mouseX< model.getRectX() + model.getRectSize() && mouseY > model.getRectY() && mouseY < model.getRectY() - model.getRectSize()/2){
-    
+  if(mouseX > model.getRectX() && mouseX< model.getRectX() + model.getRectSize() && mouseY > model.getRectY() && mouseY < model.getRectY() + model.getRectSize()/2){
+    model.setRectColor();
+    fila.submit();
   }
 }
