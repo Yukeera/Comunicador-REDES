@@ -23,10 +23,34 @@ class Model {
   
   void setupSounds() { //inicialização dos sons
     try {
-        letterA = new SoundFile(parent, "/sounds/100hz.mp3");
-        letterB = new SoundFile(parent, "/sounds/200hz.mp3");
-        letterC = new SoundFile(parent, "/sounds/400hz.mp3");
-        listSounds = new SoundFile[]{letterA, letterB, letterC};
+        letterA = new SoundFile(parent, "/sounds/100hz.wav");
+        letterB = new SoundFile(parent, "/sounds/200hz.wav");
+        letterC = new SoundFile(parent, "/sounds/300hz.wav");
+        letterD = new SoundFile(parent, "/sounds/400hz.wav");
+        letterE = new SoundFile(parent, "/sounds/500hz.wav");
+        letterF = new SoundFile(parent, "/sounds/600hz.wav");
+        letterG = new SoundFile(parent, "/sounds/700hz.wav");
+        letterH = new SoundFile(parent, "/sounds/800hz.wav");
+        letterI = new SoundFile(parent, "/sounds/900hz.wav");
+        letterJ = new SoundFile(parent, "/sounds/1000hz.wav");
+        letterK = new SoundFile(parent, "/sounds/1100hz.wav");
+        letterL = new SoundFile(parent, "/sounds/1200hz.wav");
+        letterM = new SoundFile(parent, "/sounds/1300hz.wav");
+        letterN = new SoundFile(parent, "/sounds/1400hz.wav");
+        letterO = new SoundFile(parent, "/sounds/1500hz.wav");
+        letterP = new SoundFile(parent, "/sounds/1600hz.wav");
+        letterQ = new SoundFile(parent, "/sounds/1700hz.wav");
+        letterR = new SoundFile(parent, "/sounds/1800hz.wav");
+        letterS = new SoundFile(parent, "/sounds/1900hz.wav");
+        letterT = new SoundFile(parent, "/sounds/2000hz.wav");
+        letterU = new SoundFile(parent, "/sounds/2100hz.wav");
+        letterV = new SoundFile(parent, "/sounds/2200hz.wav");
+        letterW = new SoundFile(parent, "/sounds/2300hz.wav");
+        letterX = new SoundFile(parent, "/sounds/2400hz.wav");
+        letterY = new SoundFile(parent, "/sounds/2500hz.wav");
+        letterZ = new SoundFile(parent, "/sounds/2600hz.wav");
+      
+        listSounds = new SoundFile[]{letterA, letterB, letterC,letterD, letterE, letterF,letterG, letterH, letterI,letterJ, letterK, letterL,letterM, letterN, letterO,letterP, letterQ, letterR,letterS, letterT, letterU,letterV, letterW, letterX,letterY, letterZ};
     } catch (Exception e) {
         e.printStackTrace();
     }
