@@ -17,7 +17,7 @@ class Quad{
     this.y = y;
     this.size = size;
     this.letter = letter;
-    colorButton = color (255,255,35);
+    colorButton = color (227, 227, 227);
   }
   
   void displayQuad(Quad tecla){  // Mostar o quadrado
@@ -54,7 +54,7 @@ class Quad{
   void updateColor() {
     
     if (millis() - lastClickTime > 300) {
-      colorButton = color(255, 255, 35);
+      colorButton = color(227, 227, 227);
     }
   }
   

@@ -24,7 +24,7 @@ void setup() {
 }
 
 void draw() {
-  background(0, 0, 0);
+  background(67, 69, 69);
   for (Quad quad : listQuad) { //mostrando as teclas na tela
     quad.displayQuad(quad);
     quad.updateColor();

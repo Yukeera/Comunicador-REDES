@@ -7,10 +7,10 @@ class Model {
   SoundFile letterM; SoundFile letterN; SoundFile letterO; SoundFile letterP; SoundFile letterQ; SoundFile letterR; SoundFile letterS; SoundFile letterT; SoundFile letterU; SoundFile letterV; SoundFile letterW; SoundFile letterX;
   SoundFile letterY; SoundFile letterZ; //declaração das variaveis sound
   
-  color colorButton = color(255,255,35);
+  color colorButton = color(227, 227, 227);
   int lastClickTime = 0;
   
-  float rectX = 600; float rectY = 300 ; float rectSize = 100; color rectColorClick = color(255,255,35);
+  float rectX = 600; float rectY = 300 ; float rectSize = 100;
   
   
   
@@ -69,7 +69,7 @@ class Model {
  
  void reta(String text){ //criação de retangulo
    
-   fill(rectColorClick);
+   fill(colorButton);
    rect(rectX,rectY,rectSize,rectSize/2);
    fill(0);
    text(text, rectX + 35,  rectY + 30);
@@ -98,7 +98,7 @@ class Model {
  
  void updateRectColor(){
    if (millis() - lastClickTime > 300) {
-      colorButton = color(255, 255, 35);
+      colorButton = color(227, 227, 227);
     }
  }
  
