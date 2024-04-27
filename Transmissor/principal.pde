@@ -11,7 +11,7 @@ void setup() {
   int posX = 70;
   
   
-  for (int i = 1; i < 26; i++) { //criação da lista com todas as teclas
+  for (int i = 1; i < 27; i++) { //criação da lista com todas as teclas
     listQuad.add(new Quad(posX, posY, 50, model.getAlphabet(i-1)));
     posX = posX + 70;
     if(i % 8 == 0){

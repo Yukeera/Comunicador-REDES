@@ -20,10 +20,8 @@ class ButtonR{
  }
   
   void displayButton(){
-    
     rect(x,y,width,height);
     fill(buttonColor);
-    
     text(text,x + width * 0.04,y + height*0.7);
     fill(0);
   }

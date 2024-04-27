@@ -11,6 +11,8 @@ class Fila{
   }
   
   void submit (){
+    fila.add(0, 26);
+    fila.add(27);
     for(int i = 0 ; i < fila.size();i++){
       if(i == 0){
         model.tocar(fila.get(i));
