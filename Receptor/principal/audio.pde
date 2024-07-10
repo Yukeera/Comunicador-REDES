@@ -92,7 +92,7 @@ class AudioProcess {
   void readTransmission(){ //leitura das frequencias
     //tempFreq = freqCalc();
     
-    for (int i = 0; i < 26 ; i++){
+    for (int i = 0; i < 27 ; i++){
       if(tempFreq >= lists.getValue(i) && tempFreq <= lists.getValue(i) + 99){
         if(lastLetter != lists.getAlphabet(i)){
           textFieldMsg.setText(textFieldMsg.getText() + lists.getAlphabet(i));

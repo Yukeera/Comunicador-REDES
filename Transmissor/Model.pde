@@ -5,7 +5,7 @@ class Model {
   PApplet parent;
   SoundFile letterA; SoundFile letterB; SoundFile letterC; SoundFile letterD; SoundFile letterE; SoundFile letterF; SoundFile letterG; SoundFile letterH; SoundFile letterI; SoundFile letterJ; SoundFile letterK; SoundFile letterL;
   SoundFile letterM; SoundFile letterN; SoundFile letterO; SoundFile letterP; SoundFile letterQ; SoundFile letterR; SoundFile letterS; SoundFile letterT; SoundFile letterU; SoundFile letterV; SoundFile letterW; SoundFile letterX;
-  SoundFile letterY; SoundFile letterZ; SoundFile readStart; SoundFile readEnd;//declaração das variaveis sound
+  SoundFile letterY; SoundFile letterZ; SoundFile readStart; SoundFile readEnd; SoundFile letterSpace;//declaração das variaveis sound
   
   color colorButton = color(227, 227, 227);
   int lastClickTime = 0;
@@ -25,36 +25,38 @@ class Model {
   
   void setupSounds() { //inicialização dos sons
     try {
-        letterA = new SoundFile(parent, "/sounds/400hz.wav");
-        letterB = new SoundFile(parent, "/sounds/500hz.wav");
-        letterC = new SoundFile(parent, "/sounds/600hz.wav");
-        letterD = new SoundFile(parent, "/sounds/700hz.wav");
-        letterE = new SoundFile(parent, "/sounds/800hz.wav");
-        letterF = new SoundFile(parent, "/sounds/900hz.wav");
-        letterG = new SoundFile(parent, "/sounds/1000hz.wav");
-        letterH = new SoundFile(parent, "/sounds/1100hz.wav");
-        letterI = new SoundFile(parent, "/sounds/1200hz.wav");
-        letterJ = new SoundFile(parent, "/sounds/1300hz.wav");
-        letterK = new SoundFile(parent, "/sounds/1400hz.wav");
-        letterL = new SoundFile(parent, "/sounds/1500hz.wav");
-        letterM = new SoundFile(parent, "/sounds/1600hz.wav");
-        letterN = new SoundFile(parent, "/sounds/1700hz.wav");
-        letterO = new SoundFile(parent, "/sounds/1800hz.wav");
-        letterP = new SoundFile(parent, "/sounds/1900hz.wav");
-        letterQ = new SoundFile(parent, "/sounds/2000hz.wav");
-        letterR = new SoundFile(parent, "/sounds/2100hz.wav");
-        letterS = new SoundFile(parent, "/sounds/2200hz.wav");
-        letterT = new SoundFile(parent, "/sounds/2300hz.wav");
-        letterU = new SoundFile(parent, "/sounds/2400hz.wav");
-        letterV = new SoundFile(parent, "/sounds/2500hz.wav");
-        letterW = new SoundFile(parent, "/sounds/2600hz.wav");
-        letterX = new SoundFile(parent, "/sounds/2700hz.wav");
-        letterY = new SoundFile(parent, "/sounds/2800hz.wav");
-        letterZ = new SoundFile(parent, "/sounds/2900hz.wav");
-        readStart = new SoundFile(parent, "/sounds/readStart.wav");
-        readEnd = new SoundFile(parent, "/sounds/readEnd.wav");
+        letterA = new SoundFile(parent, "/sounds/400hz.wav"); //0
+        letterB = new SoundFile(parent, "/sounds/500hz.wav"); //1
+        letterC = new SoundFile(parent, "/sounds/600hz.wav"); //2
+        letterD = new SoundFile(parent, "/sounds/700hz.wav"); //3
+        letterE = new SoundFile(parent, "/sounds/800hz.wav"); //4
+        letterF = new SoundFile(parent, "/sounds/900hz.wav"); //5
+        letterG = new SoundFile(parent, "/sounds/1000hz.wav"); //6
+        letterH = new SoundFile(parent, "/sounds/1100hz.wav"); //7
+        letterI = new SoundFile(parent, "/sounds/1200hz.wav"); //8
+        letterJ = new SoundFile(parent, "/sounds/1300hz.wav"); //9
+        letterK = new SoundFile(parent, "/sounds/1400hz.wav"); //10
+        letterL = new SoundFile(parent, "/sounds/1500hz.wav"); //11
+        letterM = new SoundFile(parent, "/sounds/1600hz.wav"); //12
+        letterN = new SoundFile(parent, "/sounds/1700hz.wav"); //13
+        letterO = new SoundFile(parent, "/sounds/1800hz.wav"); //14
+        letterP = new SoundFile(parent, "/sounds/1900hz.wav"); //15
+        letterQ = new SoundFile(parent, "/sounds/2000hz.wav"); //16
+        letterR = new SoundFile(parent, "/sounds/2100hz.wav"); //17
+        letterS = new SoundFile(parent, "/sounds/2200hz.wav"); //18
+        letterT = new SoundFile(parent, "/sounds/2300hz.wav"); //19
+        letterU = new SoundFile(parent, "/sounds/2400hz.wav"); //20
+        letterV = new SoundFile(parent, "/sounds/2500hz.wav"); //21
+        letterW = new SoundFile(parent, "/sounds/2600hz.wav"); //22
+        letterX = new SoundFile(parent, "/sounds/2700hz.wav"); //23
+        letterY = new SoundFile(parent, "/sounds/2800hz.wav"); //24
+        letterZ = new SoundFile(parent, "/sounds/2900hz.wav"); //25
+        letterSpace= new SoundFile(parent, "/sounds/3500hz.wav"); //26
+        readStart = new SoundFile(parent, "/sounds/readStart.wav"); //27
+        readEnd = new SoundFile(parent, "/sounds/readEnd.wav"); //28
+
       
-        listSounds = new SoundFile[]{letterA, letterB, letterC,letterD, letterE, letterF,letterG, letterH, letterI,letterJ, letterK, letterL,letterM, letterN, letterO,letterP, letterQ, letterR,letterS, letterT, letterU,letterV, letterW, letterX,letterY, letterZ, readStart, readEnd};
+        listSounds = new SoundFile[]{letterA, letterB, letterC,letterD, letterE, letterF,letterG, letterH, letterI,letterJ, letterK, letterL,letterM, letterN, letterO,letterP, letterQ, letterR,letterS, letterT, letterU,letterV, letterW, letterX,letterY, letterZ, letterSpace, readStart, readEnd};
     } catch (Exception e) {
         e.printStackTrace();
     }
@@ -66,7 +68,7 @@ class Model {
   }
   
   
-  String alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q", "r", "s", "t", "u", "v","w", "x", "y", "z"};
+  String alphabet[] = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q", "r", "s", "t", "u", "v","w", "x", "y", "z"," "};
   String getAlphabet(int indice){ //retorna a letra do do quad
     return alphabet[indice];
   }
