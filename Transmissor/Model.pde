@@ -5,7 +5,7 @@ class Model {
   PApplet parent;
   SoundFile letterA; SoundFile letterB; SoundFile letterC; SoundFile letterD; SoundFile letterE; SoundFile letterF; SoundFile letterG; SoundFile letterH; SoundFile letterI; SoundFile letterJ; SoundFile letterK; SoundFile letterL;
   SoundFile letterM; SoundFile letterN; SoundFile letterO; SoundFile letterP; SoundFile letterQ; SoundFile letterR; SoundFile letterS; SoundFile letterT; SoundFile letterU; SoundFile letterV; SoundFile letterW; SoundFile letterX;
-  SoundFile letterY; SoundFile letterZ; SoundFile readStart; SoundFile readEnd; SoundFile letterSpace;//declaração das variaveis sound
+  SoundFile letterY; SoundFile letterZ; SoundFile readStart; SoundFile readEnd; SoundFile letterSpace; SoundFile letterEnd;//declaração das variaveis sound
   
   color colorButton = color(227, 227, 227);
   int lastClickTime = 0;
@@ -52,11 +52,12 @@ class Model {
         letterY = new SoundFile(parent, "/sounds/2800hz.wav"); //24
         letterZ = new SoundFile(parent, "/sounds/2900hz.wav"); //25
         letterSpace= new SoundFile(parent, "/sounds/3500hz.wav"); //26
-        readStart = new SoundFile(parent, "/sounds/readStart.wav"); //27
-        readEnd = new SoundFile(parent, "/sounds/readEnd.wav"); //28
+        letterEnd = new SoundFile(parent, "/sounds/4000hz.wav"); //27
+        readStart = new SoundFile(parent, "/sounds/readStart.wav"); //28
+        readEnd = new SoundFile(parent, "/sounds/readEnd.wav"); //29
 
       
-        listSounds = new SoundFile[]{letterA, letterB, letterC,letterD, letterE, letterF,letterG, letterH, letterI,letterJ, letterK, letterL,letterM, letterN, letterO,letterP, letterQ, letterR,letterS, letterT, letterU,letterV, letterW, letterX,letterY, letterZ, letterSpace, readStart, readEnd};
+        listSounds = new SoundFile[]{letterA, letterB, letterC,letterD, letterE, letterF,letterG, letterH, letterI , letterJ, letterK, letterL,letterM, letterN, letterO,letterP, letterQ, letterR,letterS, letterT, letterU,letterV, letterW, letterX,letterY, letterZ, letterSpace, letterEnd , readStart, readEnd};
     } catch (Exception e) {
         e.printStackTrace();
     }
@@ -64,6 +65,11 @@ class Model {
   
   void tocar(int indice){ //tocando os sons
     listSounds[indice].playFor(1);
+    
+    //if (indice != 28 && indice != 29 ){
+    //  delay(1000);
+    //  listSounds[27].playFor(0.5);
+    //}
     
   }
   
