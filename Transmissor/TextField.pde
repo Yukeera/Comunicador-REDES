@@ -29,6 +29,7 @@ class TextField{
   void displayText(){
     fill(textColor);
     textSize(25);
+    textAlign(LEFT, BASELINE);
     text(text, x, y);
   }
   

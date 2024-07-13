@@ -32,7 +32,8 @@ class Retangulo{
     fill(colorButton);
     rect(x, y, largura, altura);
     fill (0, 0, 0);
-    text (text, x+(largura/3.60), y+(altura/1.7));
+    textAlign(CENTER, CENTER);
+    text (text, x + largura / 2, y + altura / 2 );
     
   }
 
@@ -51,6 +52,7 @@ class Retangulo{
     this.largura= largura;
     this.altura= altura;
     fill(colorButton);
+    
     rect(x, y, largura, altura);
   }
   

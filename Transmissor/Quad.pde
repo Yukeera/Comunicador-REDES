@@ -25,8 +25,9 @@ class Quad{
     fill(colorButton);
     square(tecla.x,tecla.y,tecla.size);
     fill(0);
-    textSize(10);
-    text(tecla.letter,tecla.x + tecla.size / 2.25, tecla.y + tecla.size / 1.75);
+    textSize(13);
+    textAlign(CENTER, CENTER);
+    text(tecla.letter,tecla.x + tecla.size / 2, tecla.y + tecla.size / 2);
     
   }
   

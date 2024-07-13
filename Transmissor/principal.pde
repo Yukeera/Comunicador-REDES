@@ -38,7 +38,7 @@ void draw() {
   }
   model.reta("ENVIAR");
   model.updateRectColor();
-  spaceButton.createRect(210.0, 290.0, 330.0, 50.0);
+  spaceButton.createRect(210.0, 290.0, 400.0, 50.0);
   spaceButton.updateColor();
 
   backspace.createRect(615.0,24.0,65.0, 32.5, "APAGAR");
@@ -72,5 +72,11 @@ void mousePressed() { // se mouse for clicado
      }
     inputText.setText(inputText.getText() + " ");
     fila.adicionar(26);
+  }
+  if (mouseX > backspace.getX() && mouseX < backspace.getX() + backspace.getLargura() && mouseY > backspace.getY() && mouseY < backspace.getY() + backspace.getAltura()){
+    if(inputText.getText() != "Digite aqui:" && inputText.getText() != ""){
+      inputText.setText(inputText.getText().substring(0, inputText.getText().length() - 1 ));
+      fila.remover(fila.getSize() - 1);
+    }
   }
 }

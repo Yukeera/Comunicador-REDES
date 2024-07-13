@@ -7,11 +7,15 @@ class Fila{
   fila = new ArrayList <Integer>(); 
  }
   
-  void adicionar(int valor){
+  public void adicionar(int valor){
     fila.add(valor);
   }
   
-  void submit (){
+  public void remover(int valor){
+    fila.remove(valor);
+  }
+  
+  public void submit (){
     fila.add(0, 27);
     fila.add(28);
     for(int i = 0 ; i < fila.size();i++){
@@ -27,6 +31,9 @@ class Fila{
     fila.clear();
   }
   
+  public int getSize(){
+    return fila.size();
+  }
   
   
 }

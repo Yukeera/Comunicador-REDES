@@ -85,7 +85,8 @@ class Model {
    fill(colorButton);
    rect(rectX,rectY,rectSize,rectSize/2);
    fill(0);
-   text(text, rectX + 18,  rectY + 20);
+   textAlign(CENTER, CENTER);
+   text(text, rectX + rectSize / 2,  rectY + (rectSize/2) /2);
  
  }
  
