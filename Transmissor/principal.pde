@@ -5,7 +5,10 @@ Quad enter = new Quad(100, 300, 50, "ENTER");
 Fila fila = new Fila();
 Quad quad = new Quad();
 Retangulo spaceButton = new Retangulo();
+
 TextField inputText = new TextField(80, 50, "Digite aqui:");
+
+Retangulo backspace= new Retangulo(color (179, 7, 7));
 
 void setup() {
   size(720, 360);
@@ -37,6 +40,9 @@ void draw() {
   model.updateRectColor();
   spaceButton.createRect(210.0, 290.0, 330.0, 50.0);
   spaceButton.updateColor();
+
+  backspace.createRect(615.0,24.0,65.0, 32.5, "APAGAR");
+
   
   
 }

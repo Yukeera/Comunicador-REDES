@@ -7,6 +7,10 @@ class Retangulo{
   private color colorButton;
   private int lastClickTime;
   private color colorClick;
+
+  private String text;
+
+
   
   Retangulo(){
     colorClick = color (240,100,200);
@@ -18,7 +22,22 @@ class Retangulo{
     colorButton = backColor;
   }
   
+
+  public void createRect(float x,float y,float largura,float altura, String text){
+    this.x= x;
+    this.y= y;
+    this.largura= largura;
+    this.altura= altura;
+    this.text = text;
+    fill(colorButton);
+    rect(x, y, largura, altura);
+    fill (0, 0, 0);
+    text (text, x+(largura/3.60), y+(altura/1.7));
+    
+  }
+
   
+
 
     
     
