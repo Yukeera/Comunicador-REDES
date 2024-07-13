@@ -10,7 +10,7 @@ class Model {
   color colorButton = color(227, 227, 227);
   int lastClickTime = 0;
   
-  float rectX = 600; float rectY = 300 ; float rectSize = 100;
+  float rectX = 540; float rectY = 24 ; float rectSize = 65;
   
   
   
@@ -84,7 +84,7 @@ class Model {
    fill(colorButton);
    rect(rectX,rectY,rectSize,rectSize/2);
    fill(0);
-   text(text, rectX + 35,  rectY + 30);
+   text(text, rectX + 18,  rectY + 20);
  
  }
  
@@ -110,7 +110,7 @@ class Model {
  
  void updateRectColor(){
    if (millis() - lastClickTime > 300) {
-      colorButton = color(227, 227, 227);
+      colorButton = color(8, 201, 60);
     }
  }
  
