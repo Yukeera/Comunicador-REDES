@@ -13,6 +13,10 @@ class Retangulo{
    
   }
   
+  Retangulo(color backColor){
+    colorButton = backColor;
+  }
+  
   
 
     

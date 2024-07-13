@@ -4,6 +4,7 @@ Quad enter = new Quad(100, 300, 50, "ENTER");
 Fila fila = new Fila();
 Quad quad = new Quad();
 Retangulo spaceButton = new Retangulo();
+TextField inputText = new TextField(100, 50, "Digite aqui!");
 
 void setup() {
   size(720, 360);
@@ -25,6 +26,8 @@ void setup() {
 
 void draw() {
   background(67, 69, 69);
+  inputText.backgroundDisplay();
+  inputText.displayText();
   for (Quad quad : listQuad) { // mostrando as teclas na tela
     quad.displayQuad(quad);
     quad.updateColor();
@@ -33,6 +36,8 @@ void draw() {
   model.updateRectColor();
   spaceButton.createRect(210.0, 290.0, 330.0, 50.0);
   spaceButton.updateColor();
+  
+  
 }
 
 void mousePressed() { // se mouse for clicado
