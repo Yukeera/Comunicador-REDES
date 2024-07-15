@@ -80,3 +80,39 @@ void mousePressed() { // se mouse for clicado
     }
   }
 }
+
+
+
+void keyPressed(){
+  char inputList[] = {'a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',' '};
+  for( int i = 0; i < 26; i++){
+    Quad quad = listQuad.get(i);
+    if (key == inputList[i]){
+      quad.clickButton();
+      fila.adicionar(i);
+      if (inputText.getText() == "Digite aqui:"){
+        inputText.setText("");
+      }
+       inputText.setText(inputText.getText() + model.getAlphabet(i));
+    }
+  }
+  if (key == ' '){
+    spaceButton.clickButton();
+    if (inputText.getText() == "Digite aqui:"){
+      inputText.setText("");
+    }
+    inputText.setText(inputText.getText() + " ");
+    fila.adicionar(26);
+  }
+  if(key == ENTER){
+     model.setRectColor();
+     fila.submit();
+     inputText.setText("Digite aqui:");
+  }
+  if (key == 8){
+    if (inputText.getText() != "Digite aqui:" && inputText.getText() != "") {
+      inputText.setText(inputText.getText().substring(0, inputText.getText().length() - 1 ));
+      fila.remover(fila.getSize() - 1);
+    }
+  }
+}

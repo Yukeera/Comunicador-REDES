@@ -16,14 +16,14 @@ class Fila{
   }
   
   public void submit (){
-    fila.add(0, 27);
-    fila.add(28);
+    fila.add(0, 28);
+    fila.add(29);
     for(int i = 0 ; i < fila.size();i++){
       if(i == 0){
         model.tocar(fila.get(i));
       }
       else{
-        delay(1000);
+        delay(500);
         model.tocar(fila.get(i));
       }
       

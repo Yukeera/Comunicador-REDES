@@ -53,7 +53,7 @@ class Model {
         letterY = new SoundFile(parent, "/sounds/2800hz.wav"); //24
         letterZ = new SoundFile(parent, "/sounds/2900hz.wav"); //25
         letterSpace= new SoundFile(parent, "/sounds/3500hz.wav"); //26
-        letterEnd = new SoundFile(parent, "/sounds/4000hz.wav"); //27
+        letterEnd = new SoundFile(parent, "/sounds/10000hz.wav"); //27
         readStart = new SoundFile(parent, "/sounds/readStart.wav"); //28
         readEnd = new SoundFile(parent, "/sounds/readEnd.wav"); //29
 
@@ -65,12 +65,12 @@ class Model {
 }
   
   void tocar(int indice){ //tocando os sons
-    listSounds[indice].playFor(1);
-    
-    //if (indice != 28 && indice != 29 ){
-    //  delay(1000);
-    //  listSounds[27].playFor(0.5);
-    //}
+    listSounds[indice].playFor(0.5);
+    System.out.println(indice);
+    if (indice != 28 && indice != 29 ){
+      delay(500);
+      listSounds[27].playFor(0.4);
+    }
     
   }
   
