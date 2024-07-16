@@ -10,7 +10,7 @@ class ButtonR{
   ButtonR(){
   }
   
-  void buttonCreate(float x, float y, float width, float height, String text){
+  void buttonCreate(float x, float y, float width, float height, String text){ //criação dos botão
    this.x = x;
    this.y = y;
    this.width = width;

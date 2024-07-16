@@ -31,40 +31,8 @@ class AudioProcess {
     return maxIndex * 44100 / (2 * bands);
   }
 
-  float mainFreq () { //faz a media das frequencias predominates durante um segundo de contagem
-    startWait = millis();
-    freqContando = true;
-    float maior = 0;
-    float temp;
-    
-    while (freqContando == true) {
-      //if (millis() - startWait < 1000) {
-      //  total += freqCalc();
-      //  contagem++;
-      //  fft.analyze();
-      //} else {
-      //  media = total / contagem;
-      //  total = 0;
-      //  contagem = 0;
-      //  freqContando = false;
-      //}
-      
-      temp = freqCalc();
-      if (millis() - startWait < 2000) {
-        if(maior < temp){
-          maior = temp; 
-        } 
-        fft.analyze(espectro);
-        
-      } else {
-        freqContando = false;
-      }
-    }
-    return maior;
-    
-  }
 
-  void displayDebugFreq() {
+  void displayDebugFreq() { //mostrar frequencia em hz na tela
     debugFreq.setText("MAINFREQ :" + tempFreq + "HZ");
     debugFreq.displayText();
   }
@@ -90,16 +58,19 @@ class AudioProcess {
   }
 
   void readTransmission(){ //leitura das frequencias
-    //tempFreq = freqCalc();
     
-    for (int i = 0; i < 27 ; i++){
-      if(tempFreq >= lists.getValue(i) && tempFreq <= lists.getValue(i) + 99){
+    for (int i = 0; i < 27 ; i++){ 
+      if(tempFreq >= lists.getValue(27) && tempFreq <= lists.getValue(27) + 99){ //condição para ter letras consecutivas iguais!
+        System.out.println("TRUE");
+        lastLetter = "";
+      }
+      
+      else if(tempFreq >= lists.getValue(i) && tempFreq <= lists.getValue(i) + 99){
         if(lastLetter != lists.getAlphabet(i)){
           textFieldMsg.setText(textFieldMsg.getText() + lists.getAlphabet(i));
           lastLetter = lists.getAlphabet(i);
         }
       }
-    
     }
     
   }

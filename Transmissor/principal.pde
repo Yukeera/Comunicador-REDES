@@ -24,7 +24,6 @@ void setup() {
       posY = posY + 70;
       posX = 70;
     }
-
   }
 }
 

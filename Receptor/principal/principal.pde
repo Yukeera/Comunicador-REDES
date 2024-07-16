@@ -35,6 +35,5 @@ void draw(){
 void mousePressed (){
  if (mouseX >= 50 && mouseX <= 50 + 100 && mouseY >= 140 && mouseY <= 140 + 50){
    textFieldMsg.cleanText();
-  
  }
 }

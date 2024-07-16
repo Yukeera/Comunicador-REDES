@@ -5,7 +5,7 @@ class TextField{
   float y;
   color textColor;
   
-  TextField(float x, float y, String text){
+  TextField(float x, float y, String text){ //criação de campos de textos
     this.text = text;
     textColor = (255);
     this.x = x;
@@ -32,7 +32,7 @@ class TextField{
     text(text, x, y);
   }
   
-  void cleanText (){
+  void cleanText (){ 
     text = "MENSAGEM: ";
     text(text, x,y);
     
