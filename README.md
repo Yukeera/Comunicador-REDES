@@ -59,3 +59,7 @@ iniciar uma operação, o som readStart é tocado para indicar que a sequência 
 Durante a execução da operação, sons individuais associados a cada letra são reproduzidos sequencialmente. Após cada reprodução de letra, exceto nos casos dos sons especiais readStart e readEnd, um atraso de 500 milissegundos é inserido antes de tocar o som readEnd, indicando assim o término da reprodução da letra correspondente. 
 
 Ao finalizar toda a sequência de operações, o som readEnd é tocado novamente para marcar o término completo da operação ou leitura. Esse protocolo proporciona uma estrutura clara e audível para orientar o usuário ao longo do processo, garantindo que os momentos de início e fim sejam nitidamente reconhecidos.
+
+### Detalhamento de funcionamento de cada módulo
+___
+[Documentação dos Módulos](modulos.md)
