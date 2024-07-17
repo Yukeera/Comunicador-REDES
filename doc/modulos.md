@@ -230,4 +230,36 @@ Isso permite decodificar a mensagem transmitida com
  Em resumo, a classe AudioProcess encapsula a lógica essencial para capturar, processar e interpretar o
  áudio em tempo real. Ao analisar as frequências predominantes e monitorar mudanças
  específicas no espectro de áudio, ela facilita a detecção e a interpretação de transmissões
- de dados com base nas frequências transmitidas
+ de dados com base nas frequências transmitidas.
+
+ ###  Button (receptor)
+
+ A classe ButtonR em Java é responsável por criar e exibir botões retangulares na tela. Ela
+ possui atributos como coordenadas (x, y), largura (width), altura (height) e um texto (text)
+ que é exibido dentro do botão. Além disso, há um atributo para definir a cor do botão
+ (buttonColor).
+
+ O método buttonCreate inicializa os atributos do botão com as coordenadas, dimensões e
+ texto especificados, e então chama o método displayButton para desenhar o botão na tela.
+ Ométodo displayButton desenha o retângulo na posição determinada por x e y, com a
+ largura e altura especificadas. Ele preenche o botão com a cor definida em buttonColor e
+ exibe o texto no centro do botão.
+
+ Essa classe é útil para criar botões interativos em interfaces gráficas, proporcionando uma
+ maneira simples e eficaz de interação do usuário com o programa.
+
+ ### Lista (receptor)
+ A classe ListValues em Java contém duas listas: uma alphabet que armazena as letras do
+ alfabeto e um espaço em branco, e outra testValues que contém valores inteiros associados
+ aos intervalos de frequência correspondentes a cada letra e ao espaço em branco.
+
+ Essas listas permitem associar diretamente cada letra ou espaço em branco a intervalos
+ específicos de frequência, facilitando a interpretação e decodificação de mensagens
+ transmitidas através de sinais sonoros em aplicações de processamento de áudio.
+ - TextField Receptor: 
+
+ A classe TextField em Java é usada para representar um campo de texto em aplicações
+ gráficas. Ela mantém um texto atual, definido inicialmente pelo construtor com uma posição
+ específica (x, y) na tela. A cor do texto pode ser alterada usando o método setColor.
+ Métodos como getText permitem acessar o texto atual, enquanto setText define um novo
+ texto. 
