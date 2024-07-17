@@ -62,3 +62,18 @@ Ao finalizar toda a sequência de operações, o som readEnd é tocado novamente
 
 ### Detalhamento de funcionamento de cada módulo
 [Documentação dos Módulos](doc/modulos.md)
+
+### Componentes do Projeto
+___
+
+- Fernando Yuri Vital de Aquino
+- Lucas de Moraes dos Santos 
+- Luiz Felipe Pinheiro Lopes
+- Mayra Perpétua de Melo Silva
+- Samuel Medeiros de Oliveira
+
+### Professor
+___
+
+- Moisés Cirilo de Brito Souto
+
