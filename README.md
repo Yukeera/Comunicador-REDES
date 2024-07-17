@@ -38,7 +38,7 @@ Em relação às camadas do modelo ISO/OSI, um breve mapeamento auxilia no enten
 
 - Camada de Aplicação: é a ponte entre o sistema e o usuário final, onde a mensagem decodificada é apresentada através da interface gráfica do Processing, apresentando a mensagem inicialmente enviada por outro usuário. 
 
-### Transformada de Furrier no projeto 
+### Transformada de Furier no projeto 
 ___ 
 
 A Transformada de Fourier é uma técnica matemática usada para transformar um sinal do domínio do tempo para o domínio da frequência. Isso permite analisar os diferentes componentes de frequência presentes no sinal. 
@@ -48,3 +48,14 @@ Neste projeto, a Transformada de Fourier é utilizada para analisar o áudio cap
 - No método draw(), a FFT é chamada para analisar o áudio em tempo real. O resultado da análise é armazenado no array espectro, que contém a magnitude de cada banda de frequência.
 
 Com essa análise, é possível identificar frequências específicas e realizar ações baseadas nelas, como a detecção de início e fim de transmissões e a leitura de sinais codificados em frequências específicas.
+
+### Protocolo de comunicação
+___ 
+
+O protocolo de início e fim implementado na classe Model, utiliza sons específicos para
+marcar claramente o começo e o término de uma sequência de operações ou leituras. Ao
+iniciar uma operação, o som readStart é tocado para indicar que a sequência de ações está prestes a começar. 
+
+Durante a execução da operação, sons individuais associados a cada letra são reproduzidos sequencialmente. Após cada reprodução de letra, exceto nos casos dos sons especiais readStart e readEnd, um atraso de 500 milissegundos é inserido antes de tocar o som readEnd, indicando assim o término da reprodução da letra correspondente. 
+
+Ao finalizar toda a sequência de operações, o som readEnd é tocado novamente para marcar o término completo da operação ou leitura. Esse protocolo proporciona uma estrutura clara e audível para orientar o usuário ao longo do processo, garantindo que os momentos de início e fim sejam nitidamente reconhecidos.
