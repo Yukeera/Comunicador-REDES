@@ -34,6 +34,7 @@
  apagará a última letra digitada.
 
  ### Retângulo (transmissor)
+ ___
 
  A classe Retangulo representa um botão retangular no teclado virtual, sendo responsável
  por sua inicialização, exibição e interação. 
@@ -72,6 +73,8 @@ Dessa forma, a interação com o botão é gerenciada pelo método clickButton()
  após um curto período.
 
  ### Quad (transmissor)
+ ___
+
  A classe Quad representa uma tecla do teclado virtual, sendo responsável por sua
  inicialização, exibição e interação. Cada instância da classe possui atributos como as
  coordenadas x e y do canto superior esquerdo do quadrado, o size, que determina o
@@ -102,6 +105,7 @@ Dessa forma, a interação com o botão é gerenciada pelo método clickButton()
  após um curto período. 
 
  ### TextField (transmissor)
+ ___
 
  A classe TextField representa um campo de texto no teclado virtual, sendo responsável pela
  exibição do texto digitado e pelo fundo do campo de texto. Cada instância da classe possui
@@ -126,6 +130,7 @@ Dessa forma, a interação com o botão é gerenciada pelo método clickButton()
  pode exibir o texto na tela e mostrar um fundo semi-transparente.
 
  ### Fila (transmissor)
+ ___
 
  A classe Fila implementa uma estrutura de dados em fila utilizando um ArrayList<Integer>,
  que armazena uma sequência ordenada de números inteiros. Essa classe oferece métodos
@@ -148,6 +153,7 @@ Dessa forma, a interação com o botão é gerenciada pelo método clickButton()
  da fila com facilidade.
 
  ###  Model (transmissor)
+ ___
 
  A classe Model é projetada para gerenciar sons e componentes gráficos, especificamente
  sons associados a letras e algumas operações especiais.
@@ -184,6 +190,8 @@ Ela possui vários atributos, incluindo referências a arquivos de som (SoundFil
  interface. 
 
  ###  Principal (receptor)
+ ___
+
  Em resumo, este programa captura o áudio do microfone, realiza a análise FFT para obter o
  espectro de frequência e exibe essas informações na tela. Ele inclui campos de texto para
  exibir mensagens e frequências, além de um botão "Limpar" que apaga o texto exibido
@@ -191,6 +199,8 @@ Ela possui vários atributos, incluindo referências a arquivos de som (SoundFil
  gerenciam a funcionalidade e a exibição dos elementos da interface gráfica.
 
  ### Audio (receptor)
+ ___
+
  Funcionamento Principal
  Análise de Frequência (freqCalc):
  - O método freqCalc percorre o espectro de frequências capturadas pelo FFT (Transformada
@@ -233,6 +243,7 @@ Isso permite decodificar a mensagem transmitida com
  de dados com base nas frequências transmitidas.
 
  ###  Button (receptor)
+ ___
 
  A classe ButtonR em Java é responsável por criar e exibir botões retangulares na tela. Ela
  possui atributos como coordenadas (x, y), largura (width), altura (height) e um texto (text)
@@ -249,6 +260,8 @@ Isso permite decodificar a mensagem transmitida com
  maneira simples e eficaz de interação do usuário com o programa.
 
  ### Lista (receptor)
+ ___
+ 
  A classe ListValues em Java contém duas listas: uma alphabet que armazena as letras do
  alfabeto e um espaço em branco, e outra testValues que contém valores inteiros associados
  aos intervalos de frequência correspondentes a cada letra e ao espaço em branco.
