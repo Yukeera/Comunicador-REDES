@@ -61,5 +61,4 @@ Durante a execução da operação, sons individuais associados a cada letra sã
 Ao finalizar toda a sequência de operações, o som readEnd é tocado novamente para marcar o término completo da operação ou leitura. Esse protocolo proporciona uma estrutura clara e audível para orientar o usuário ao longo do processo, garantindo que os momentos de início e fim sejam nitidamente reconhecidos.
 
 ### Detalhamento de funcionamento de cada módulo
-___
-[Documentação dos Módulos](modulos.md)
+[Documentação dos Módulos](doc/modulos.md)
